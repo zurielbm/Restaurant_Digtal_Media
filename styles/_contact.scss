@@ -1,0 +1,105 @@
+.contact-area {
+    display: flex;
+    justify-content: space-evenly;
+
+    @include media ("<=desktop"){
+        flex-direction: column;
+    }
+
+    @include set-background-color($PrimaryColor);
+
+
+    .contact-us {
+        flex: 1;
+        border-radius: 5%;
+
+        .form-conatiner {
+            @include set-background-color($SecondaryColor);
+            margin: 5rem 3rem;
+            border-radius: 5%;
+
+            @include media ("<=desktop"){
+                margin: 5rem 10rem;
+            }
+
+            h2 {
+                text-align: center;
+                padding-top: 3rem;
+                padding-bottom: 1rem;
+            }
+            
+            form {
+                padding-top: 3rem;
+                padding-bottom: 5rem;
+                padding-right: 7rem;
+                padding-left: 7rem;
+
+                
+
+                .form-textstyle { 
+                    input {
+                        margin: .5rem 0rem;
+    
+                        width: 100%;
+                        height: 4rem;
+                
+                        font-size: 1.5rem;
+
+                        
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                    width: 100%;
+                    height: 10rem;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 1.5rem;
+
+                    margin: .5rem 0rem;
+
+                }
+                
+                .btn-submit {
+                    //background-color: $BtnColor;
+                    @include set-background-color($BtnColor);
+                    text-decoration: none;
+                    border: none;
+                    padding: 1rem 2rem;
+
+                    font-size: 1rem;
+                }
+            }
+
+        }
+
+    }
+
+    .find-us {
+        flex: 1;
+
+        .find-container {
+            margin: 5rem 7rem;
+            
+            h2 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+                text-align: center;
+            }
+            
+            p {
+                line-height: 4rem;
+            }
+
+            iframe {
+                margin-top: 2rem;
+            }
+
+        }
+
+        
+    }
+}
+
+
+

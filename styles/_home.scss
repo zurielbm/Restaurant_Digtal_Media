@@ -1,0 +1,142 @@
+
+
+.nav-container {
+    @include set-background-color($PrimaryColor);
+    
+    height: 100%;
+    position: relative;
+    
+}
+
+nav {
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    li {
+        margin: .5rem;
+    } 
+
+    .btn-nav {
+        background-color: $BtnColor;
+        padding: .5em;
+    }
+
+    #logo {
+        background-color: $SecondaryColor;
+        padding: .5rem;
+        border-radius: 10%;
+        color: $PrimaryColor;
+    }
+}
+
+.nav-toggle {
+
+    display: none;
+    flex-direction: column;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    justify-content: space-between;
+    right: 1rem;
+    top: .75rem;
+    margin: 1rem;
+
+    .bar{
+        background-color: $SecondaryColor;
+        height: 1px;
+        width: 100%;
+    }
+
+    
+}
+
+.home {
+    @include set-background-color($PrimaryColor);
+    
+
+    .home-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            rgba(27, 27, 30, 0.5),
+            rgba(27, 27, 30, 0.5)), url(../img/home.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        width: auto;
+
+        @include media("<=phone"){
+            height: 300px;
+        }
+
+        @include media(">=phone", "<=tablet"){
+            height: 400px;
+        }
+
+        @include media (">=tablet", "<=desktop"){
+            height: 600px;
+        }
+
+        @include media(">=desktop"){
+            min-height: 750px;
+        } 
+    }
+    
+    .home-text-center {  
+        
+        text-align: center;
+        h1 {
+            padding: 2rem 0rem;
+        }
+        a {
+
+            background-color: $BtnColor;
+            padding: 1em;
+        }
+
+        .btn-home {
+            margin: 1.5rem;
+        }
+    }
+}
+
+@include media("<=tablet"){
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 3;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+
+        ul {
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        li {
+            margin: 1rem;
+        }
+
+    }
+
+}

@@ -1,0 +1,97 @@
+@mixin logo-box {
+    box-shadow: 0rem 0rem 1rem $PrimaryColor;
+
+    padding: 2rem 3rem;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+    
+}
+
+.client-container {
+    display: flex;
+
+    h2 {
+        text-align: center;
+    }
+
+    @include media ("<=desktop"){
+        flex-direction: column;
+    }
+
+    .our-clients {
+        @include set-background-color($SecondaryColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 1 0px;
+
+
+        .client1 {
+            @include logo-box();
+            display: flex;
+            justify-content: center;
+            .client1-logo {
+                max-height: 80px;
+            }
+        }
+
+        .client2 {
+            @include logo-box();
+            display: flex;
+            justify-content: center;
+            .client2-logo {
+                max-height: 80px;
+            }
+        }
+
+        .more-clients {
+            @include logo-box;
+            h3 {
+                padding: 2.5rem;
+            }
+        }
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .client-say {
+        @include set-background-color($PrimaryColor);
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        
+
+        .client-logo {
+            display: flex;
+            justify-content: center;
+            
+            .client-say-logo {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                background-color: white;
+                @include media ("<=desktop"){
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+
+        h2 {
+            margin: 5rem 0rem;
+        }
+
+        p {
+            margin: 5rem 10rem 5rem 10rem;
+        }
+
+        
+    }
+}

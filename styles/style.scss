@@ -1,0 +1,71 @@
+@import 'config';
+@import './include-media';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    @include media (">=desktop-1440") {
+        font-size: 100%;
+    }
+
+    @include media(">=desktop", "<=desktop-1440"){
+        font-size: 62.5%;
+    }
+    @include media (">=tablet", "<=desktop"){
+        font-size: 50%;
+    }
+    @include media (">=phone", "<=tablet"){
+        font-size: 40%;
+    }
+    @include media("<=phone"){
+        font-size: 30%;
+    }
+}
+
+body {
+    // 62.5% is use so 1rem = 10px
+    //font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.0rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2.0rem;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p, a {
+    font-size: 1.6rem;
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+@import 'home';
+@import 'whatwd';
+@import 'clients';
+@import 'contact';
+@import 'aboutus';
+@import 'footer';

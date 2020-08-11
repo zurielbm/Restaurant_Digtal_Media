@@ -1,0 +1,16 @@
+$PrimaryColor: #1B1B1E;
+$SecondaryColor: #FBFFFE;
+$BtnColor: #307EB6;
+
+@function text-color($color) {
+    @if (lightness($color) > 70) {
+        @return $PrimaryColor;
+    } @else {
+        @return $SecondaryColor;
+    }
+}
+
+@mixin set-background-color($color){
+    background-color: $color;
+    color: text-color($color);
+}

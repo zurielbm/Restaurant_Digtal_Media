@@ -157,6 +157,9 @@ nav #logo {
   background: linear-gradient(rgba(27, 27, 30, 0.5), rgba(27, 27, 30, 0.5)), url(../img/home.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
   width: auto;
 }
 
